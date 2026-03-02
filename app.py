@@ -20,10 +20,10 @@ def main():
 
     # Input components
     location = st.selectbox("Select Location", locations)
-    bhk = st.number_input("Enter BHK", "")
-    sqft = st.number_input("Enter total house area in sqft", "")
-    bath = st.number_input("Enter number of bathroom(s)", "")
-    balcony = st.number_input("Enter number of balcony(ies)", "")
+    bhk = st.number_input("Enter BHK",min_value=0)
+    sqft = st.number_input("Enter total house area in sqft",min_value=0)
+    bath = st.number_input("Enter number of bathroom(s)",min_value=0)
+    balcony = st.number_input("Enter number of balcony(ies)",min_value=0)
 
     # Predict button
     if st.button("Predict Price"):
@@ -36,4 +36,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
